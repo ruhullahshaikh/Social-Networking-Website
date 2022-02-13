@@ -1,0 +1,249 @@
+//for branch develop
+git config --global user.name "ruhullahshaikh"
+git config --global user.email "ruhullahshaikh7@gmail.com"
+git config --list
+
+//for linux
+/*  git config --global core.editor emacs
+git config --global core.editor vim
+touch /*
+
+git config user.name
+git config user.email
+
++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//main git
+git status
+git init
+git status
+
+//for adding all file in staging area
+git add --a
+
+//commit
+git commit -m "First project commit"
+
+
+//checking commit
+git log
++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//for adding one file in staging area(gitCommand.txt is a file name)
+git add  gitCommand.txt
+
+//deleting all git file command
+rm -rf .git
+
+
+//for ignoring file in git
+
+// create error.log file in folder
+// create .giignore file by use following command
+
+touch .gitignore
+
+//and in .gitignore file include error.log file
+//and run git status and add add all changes and then commit it
+
+
+// command for ignoring all .log file 
+
+
+*.log
+
+
+//for ignoring dorectory in git file
+
+add file name in .gitignore file(dir/ is a file name)
+
+dir/
+
+
+//git by default ignore blank folder
+
+
+// for ignoring only ouuter file
+dir is file name
+	/dir/
+//or 
+static/dir/
+
+//differnce between Commits/Staging Area & Working Directory 
+
+// git diff show compare between staging area and working directory
+git diff
+
+//for compare previous commit and staged file 
+
+git diff --staged
+
++++++++++++++++++++++++++++++++++++++++++++++++++
+//direct commit in git
+/untracked file directly not goes into direct commit
+git commit -a -m "Direct Commit"
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+//type after git log
+for exit (q)
+
++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//moving and renaming Files In Git
+
+//normal method
+git status
+//rename file manually
+git add .
+git status
+git commit -m "renamed file"
+
+
+//deleting file in git 
+
+third.txt is a file name
+git rm third.txt
+
+
+//rename file using git
+git mv first.txt first1.txt
+
+
+
+//for not tracking file .gitignore some  file will be track beacause it is before in git tracking so use following command and not deleted file
+// first.accdb is a file name
+git rm --cached first.accdb
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//Git Log: Viewing & Changing Commits In Git 
+command for remobing git repository
+
+rm -rf .git
+
+//show what changes in file
+
+git log -p
+git log -p -3
+
+//show stats of commit in git
+git log --stat
+
+//show status of commit in one line
+git log --pretty=oneline
+
+//show status of commit in short
+git log --pretty=short
+
+//show status of commit in full
+git log --pretty=full
+
+
+//showing git commit by days month and year
+
+git log --since=2.days
+git log --since=2.weeks
+git log --since=2.months
+git log --since=2.years
+
+//formatting git commit
+
+git log --pretty=format:"%h--%an"
+git log --pretty=format:"%h--%ae"
+
+//amending/changing anyone commit in git
+
+git commit --amend
+//i button is uded for edit vim editor in git
+esc+:+w+q for amneding commit
++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//for staging to unstage file
+
+git restore --staged <file>
+
+
+//for restoring previous one file information
+git checkout -- <file>
+
+//for restoring previous all file information
+git checkout -f
+
++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//Working with Remote Repositories
+
+git remote
+git remote add origin git@github.com:ruhullahshaikh/gitTutprial.git
+git remote -v (show fetch and push)
+
+//select branch
+git branch -M main
+git push -u origin main //throw error
+
+
+//got to account main settings and add new ssh keys
+
+
+
+//add this in git bash
+
+ssh-keygen -t ed25519 -C "ruhullahshaikh7@gmail.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+
+tail ~/.ssh/id_ed25519.pub
+
+//then run 
+git branch -M main
+git push -u origin main
+
++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//Setting Alias In Git
+// changing status as st
+git config --global alias.st status
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//Git branching 
+//develop is a branch name
+git checkout -b develop
+
+//back to previous branch
+git checkout main
+
++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//Branching & Merging a Production Grade
+git checkout -b "Hi"
+git checkout Hi
+
+/merging
+git merger cleanup //(clean up is branch)
+
++++++++++++++++++++++++++++++++++++++++++++++++++
+//for cloning outer file in git "(https://github.com/tensorflow/tensorflow.git)"is file name
+git clone https://github.com/tensorflow/tensorflow.git
+
+//for cloning outer file in git "(https://github.com/tensorflow/tensorflow.git)"is file name and giving own file name 'soul' is a file name
+git clone https://github.com/tensorflow/tensorflow.git soul
+
+//git documentation
+
+https://git-scm.com/docs/git-log
+
+//for readme file (markdown file)
+https://readme.so/
+
+
+//generating ssh keys on gothub
+
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
